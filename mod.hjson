@@ -1,17 +1,17 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Ataris FIRST MINDUSTRY MOD"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "ataris-first-mod"
 
 #your name
-author: "You"
+author: "atari09"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "atari09.AtariJavaMod"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "This is my first Mindustry Mod."
 
 #the mod version
 version: 1.0
