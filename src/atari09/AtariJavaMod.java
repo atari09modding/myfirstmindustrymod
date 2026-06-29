@@ -2,9 +2,11 @@ package atari09;
 
 import arc.*;
 import arc.util.*;
-import atari09.content.blocks.BlockTypes;
-import atari09.content.blocks.Blocks;
-import mindustry.entities.Damage;
+import atari09.content.blocks.ModBlockTypes;
+import atari09.content.blocks.ModBlocks;
+import atari09.content.techtree.ModTechTreeLoader;
+import atari09.content.units.ModUnitPlans;
+import atari09.content.units.ModUnitTypes;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
@@ -50,12 +52,15 @@ public class AtariJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
-        Blocks.load();
+        ModBlocks.load();
+        ModUnitTypes.load();
+        ModUnitPlans.load();
+        ModTechTreeLoader.load();
     }
 
 
     public void putClasses(){
-        ClassMap.classes.put("ExplosiveWallBuild", BlockTypes.ExplosiveWall.ExplosiveWallBuild.class);
+        ClassMap.classes.put("ExplosiveWallBuild", ModBlockTypes.ExplosiveWall.ExplosiveWallBuild.class);
     }
 
 }

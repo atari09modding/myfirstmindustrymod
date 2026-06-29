@@ -3,11 +3,10 @@ package atari09.content.blocks;
 import mindustry.content.Items;
 import mindustry.type.Category;
 import mindustry.world.Block;
-import mindustry.world.blocks.defense.Wall;
 
 import static mindustry.type.ItemStack.with;
 
-public class Blocks {
+public class ModBlocks {
 
     public static Block red_wall;
 
@@ -15,10 +14,12 @@ public class Blocks {
 
         int wallHealthMultiplier = 4;
 
-        red_wall = new BlockTypes.ExplosiveWall("explosive-reactive-wall"){{
-            requirements(Category.defense, with(Items.graphite, 5, Items.coal, 5));
+        red_wall = new ModBlockTypes.ExplosiveWall("explosive-reactive-wall"){{
+            requirements(Category.defense, with(Items.silicon, 5, Items.blastCompound, 5));
             health = 100 * wallHealthMultiplier;
             researchCostMultiplier = 0.1f;
+
+
         }};
     }
 }
